@@ -7,7 +7,7 @@ Shader "Unlit/PlanetLandMass"
 	    _Rotation("Rotation",range(0.0, 6.28)) = 0.0
     	_Light_origin("Light origin", Vector) = (0.39,0.39,0.39,0.39)
 	    _Time_speed("Time Speed",range(-1.0, 1.0)) = 0.2
-	    _Dither__Size("Dither Size",range(0.0, 10.0)) = 2.0
+	    _Dither_Size("Dither Size",range(0.0, 10.0)) = 2.0
     	
 	    _Light_border_1("Light border1",range(0.0, 1.0)) = 0.52
 	    _Light_border_2("Light border2",range(0.0, 1.0)) = 0.62
@@ -66,7 +66,7 @@ Shader "Unlit/PlanetLandMass"
             float4 _MainTex_ST;
             float _Pixels;
             float _Rotation;
-            float _Dither__Size;
+            float _Dither_Size;
 			float2 _Light_origin;    	
 			float _Time_speed;
             float _Land_cutoff;
