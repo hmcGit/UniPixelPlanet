@@ -62,5 +62,8 @@ UniPixelPlanet is under [MIT license](https://en.wikipedia.org/wiki/MIT_License)
 
 # Thanks
 
-PixelPlanet made with Godot by Deep-Fold. It's awesome tool!
+Awesome tool PixelPlanet made with Godot by Deep-Fold.
+
+UniPixelPlanet is ported from PixelPlanet(Godot) .
+
 [PixelPlanets](https://github.com/Deep-Fold/PixelPlanets)
