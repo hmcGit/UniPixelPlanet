@@ -16,7 +16,7 @@ Shader "Unlit/StarFlares"
 	    _Scale("Scale", float) = 1.0
 	    _Seed("Seed",range(1, 10)) = 1
     	_Circle_amount("Circle Amount",range(2, 30)) = 5
-    	_Circle__Size("Circle Size",range(0.0, 1.0)) = 1.0
+    	_Circle_Size("Circle Size",range(0.0, 1.0)) = 1.0
 	    
     	_Size("Size",float) = 50.0
 	    _OCTAVES("OCTAVES", range(0,20)) = 0
@@ -71,7 +71,7 @@ Shader "Unlit/StarFlares"
             int _Seed;
 
             float _Circle_amount;
-            float _Circle__Size;
+            float _Circle_Size;
             float _Storm_width;
             float _Storm_dither_width;
 
@@ -112,7 +112,7 @@ Shader "Unlit/StarFlares"
 				float r = rand(rand_co);
 				r = clamp(r, invert, 1.0 - invert);
 				float circle = distance(uv, float2(r,r));
-				return smoothstep(circle, circle+0.5, invert * _Circle__Size * rand(rand_co*1.5));
+				return smoothstep(circle, circle+0.5, invert * _Circle_Size * rand(rand_co*1.5));
 			}
 			float noise(float2 coord){
 				float2 i = floor(coord);
