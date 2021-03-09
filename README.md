@@ -1,13 +1,11 @@
 # UniPixelPlanet
 ![color:ff69b4](https://img.shields.io/badge/licence-MIT-blue)
-
-<img src="https://raw.githubusercontent.com/hmcGit/UniPixelPlanet/master/unipp.gif" width="960" alt="UniPixelPlanet Sample gif">
 UniPixelPlanet is Pixel Planet generator (Made with Unity).
- 
+<img src="https://raw.githubusercontent.com/hmcGit/UniPixelPlanet/master/unipp.gif" width="960" alt="UniPixelPlanet Sample gif">
+
 # DEMO
  
  [WebGL Demo](https://hmcgit.github.io/UniPixelPlanetWebGLDemo/)
-
  
 # Features
  
