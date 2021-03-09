@@ -5,7 +5,9 @@
 <img src="https://raw.githubusercontent.com/hmcGit/UniPixelPlanet/master/unipp.gif" width="960" alt="UniPixelPlanet Sample gif">
 
 UniPixelPlanet is Pixel Planet generator (Made with Unity).
+
 PixelPlanet created with shader.
+
 Tested with URP.（It will works with standard shader, but not tested)
 
 
@@ -62,6 +64,7 @@ UniPixelPlanet is under [MIT license](https://en.wikipedia.org/wiki/MIT_License)
 # Thanks
 
 Awesome tool PixelPlanet made with Godot by Deep-Fold.
+
 UniPixelPlanet is ported from PixelPlanet(Godot) .
 
 [PixelPlanets](https://github.com/Deep-Fold/PixelPlanets)
