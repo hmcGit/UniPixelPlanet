@@ -1,8 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
-using UnityEngine.Purchasing.Extension;
 using UnityEngine.UI;
 
 public class GasLayers : MonoBehaviour, IPlanet {
