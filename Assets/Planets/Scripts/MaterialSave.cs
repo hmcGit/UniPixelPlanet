@@ -3,12 +3,33 @@ using System.IO;
 using System.Collections;
 using UnityEngine;
 using SFB;
+#if UNITY_WEBGL && !UNITY_EDITOR
+using System.Runtime.InteropServices;
+#endif
+
 public class MaterialSave : MonoBehaviour
 {
     private int base_width = 100;
     private int base_height = 100;
     private List<Material> materials = new List<Material>();
 
+#if UNITY_WEBGL && !UNITY_EDITOR
+    //
+    // WebGL
+    //
+    [DllImport("__Internal")]
+    private static extern void DownloadFile(string gameObjectName, string methodName, string filename, byte[] byteArray, int byteArraySize);
+
+    // Broser plugin should be called in OnPointerDown.
+    //public void OnPointerDown(PointerEventData eventData) {
+    //    DownloadFile(gameObject.name, "OnFileDownload", "sample.png", _textureBytes, _textureBytes.Length);
+    //}
+
+    // Called from browser
+    public void OnFileDownload() {
+        
+    }
+#endif
     public void SaveImage(List<Material> mats, string filename)
     {
         var texture = Texture2D.whiteTexture;
@@ -29,8 +50,14 @@ public class MaterialSave : MonoBehaviour
         Object.DestroyImmediate(tex);
         RenderTexture.ReleaseTemporary(renderTexture);
 
+#if UNITY_WEBGL && !UNITY_EDITOR
+        DownloadFile(gameObject.name, "OnFileDownload", filename + ".png",bytes, bytes.Length);
+#else
         var path = StandaloneFileBrowser.SaveFilePanel("Save Png", "", filename, "png");
         File.WriteAllBytes(path, bytes);
+#endif
+        
+        
         
     }
     public void SaveSheets(List<Material> mats, string filename, int w, int h,IPlanet planet, int customesize)
@@ -73,8 +100,14 @@ public class MaterialSave : MonoBehaviour
         Object.DestroyImmediate(tex);
         RenderTexture.ReleaseTemporary(renderTexture);
         yield return new WaitForEndOfFrame();
+        
+#if UNITY_WEBGL && !UNITY_EDITOR
+        DownloadFile(gameObject.name, "OnFileDownload", filename+ ".png",bytes, bytes.Length);
+#else
         var path = StandaloneFileBrowser.SaveFilePanel("Save Sprite Sheets", "", filename, "png");
         File.WriteAllBytes(path, bytes);
+#endif
+
 
     }
 }
