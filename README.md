@@ -33,13 +33,15 @@ UniPixelPlanet is Pixel Planet generator (Made with Unity).
 * Light origin
 * Rotation
 * Pixels
+* Export png 
+* Export spritesheet
 
 # Requirement
  
 "hoge"を動かすのに必要なライブラリなどを列挙する
  
-* huga 3.5.2
-* hogehuga 1.0.2
+* UI Asset [Simple pixel art UI pack](https://kobliznik.itch.io/pixel-ui-pack)
+* Save File Dialog [Unity Standalone File Browser](https://github.com/gkngkc/UnityStandaloneFileBrowser)
  
 # Installation
  
