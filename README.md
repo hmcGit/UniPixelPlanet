@@ -5,9 +5,7 @@
 <img src="https://raw.githubusercontent.com/hmcGit/UniPixelPlanet/master/unipp.gif" width="960" alt="UniPixelPlanet Sample gif">
 
 UniPixelPlanet is Pixel Planet generator (Made with Unity).
-
 PixelPlanet created with shader.
-
 Tested with URP.（It will works with standard shader, but not tested)
 
 
@@ -37,11 +35,6 @@ Tested with URP.（It will works with standard shader, but not tested)
 * Export png 
 * Export spritesheet
 
-# Requirement
- 
-* [Simple pixel art UI pack](https://kobliznik.itch.io/pixel-ui-pack) - UI Asset
-* [Unity Standalone File Browser](https://github.com/gkngkc/UnityStandaloneFileBrowser) - Save File Dialog 
-
 # Usage
  
 Use Prefab or Materials/Shaders.
@@ -52,7 +45,12 @@ Use Prefab or Materials/Shaders.
 
 * WebGL : Export doesn't work.
 * Export : In some planet type ( Gas Giant2/Asterois/Stars ), export png and export spritesheets doesn't work properly.Image does not fit in area.
+
+# Using free assets
  
+* [Simple pixel art UI pack](https://kobliznik.itch.io/pixel-ui-pack) - UI Asset
+* [Unity Standalone File Browser](https://github.com/gkngkc/UnityStandaloneFileBrowser) - Save File Dialog 
+
 # Author
 
 * [hmcGit](https://github.com/hmcGit)
@@ -64,7 +62,6 @@ UniPixelPlanet is under [MIT license](https://en.wikipedia.org/wiki/MIT_License)
 # Thanks
 
 Awesome tool PixelPlanet made with Godot by Deep-Fold.
-
 UniPixelPlanet is ported from PixelPlanet(Godot) .
 
 [PixelPlanets](https://github.com/Deep-Fold/PixelPlanets)
