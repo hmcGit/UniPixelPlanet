@@ -1,7 +1,7 @@
 # UniPixelPlanet
- 
+ https://img.shields.io/badge/licence-MIT-blue
 <img src="https://raw.githubusercontent.com/hmcGit/UniPixelPlanet/master/unipp.gif" width="960" alt="UniPixelPlanet Sample gif">
-UniPixelPlanet is Unity version Pixel planet generator.
+UniPixelPlanet is Pixel Planet generator (Made with Unity).
  
 # DEMO
  
@@ -10,7 +10,7 @@ UniPixelPlanet is Unity version Pixel planet generator.
  
 # Features
  
-"hoge"のセールスポイントや差別化などを説明する
+<img src="https://user-images.githubusercontent.com/7788005/110446476-8d91ea80-8102-11eb-8c4a-f1ff1f1b6ff4.gif" width="960" alt="UniPixelPlanet Sample gif">
  
 # Requirement
  
@@ -39,14 +39,12 @@ python demo.py
  
 # Note
  
-<img src="https://user-images.githubusercontent.com/7788005/110446476-8d91ea80-8102-11eb-8c4a-f1ff1f1b6ff4.gif" width="960" alt="UniPixelPlanet Sample gif">
+
 注意点などがあれば書く
  
 # Author
 
-* hmcGit
-* 所属
-* E-mail
+* [hmcGit](https://github.com/hmcGit)
  
 # License
  
