@@ -1,7 +1,9 @@
 # UniPixelPlanet
 ![color:ff69b4](https://img.shields.io/badge/licence-MIT-blue)
-UniPixelPlanet is Pixel Planet generator (Made with Unity).
+
 <img src="https://raw.githubusercontent.com/hmcGit/UniPixelPlanet/master/unipp.gif" width="960" alt="UniPixelPlanet Sample gif">
+
+UniPixelPlanet is Pixel Planet generator (Made with Unity).
 
 # DEMO
  
@@ -11,6 +13,9 @@ UniPixelPlanet is Pixel Planet generator (Made with Unity).
  
 <img src="https://user-images.githubusercontent.com/7788005/110446476-8d91ea80-8102-11eb-8c4a-f1ff1f1b6ff4.gif" width="960" alt="UniPixelPlanet Sample gif">
  
+* Generate Planet
+** Wet/Dry/Island/
+
 # Requirement
  
 "hoge"を動かすのに必要なライブラリなどを列挙する
