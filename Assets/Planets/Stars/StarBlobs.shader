@@ -15,7 +15,7 @@ Shader "Unlit/StarBlobs"
 	    _OCTAVES("OCTAVES", range(0,20)) = 0
 	    _Seed("Seed",range(1, 10)) = 1
     	_Circle_amount("Circle Amount",range(2, 30)) = 5
-    	__Circle_Size("Circle Size",range(0.0, 1.0)) = 1.0
+    	_Circle_Size("Circle Size",range(0.0, 1.0)) = 1.0
 	    time("time",float) = 0.0
     	
     }
@@ -65,7 +65,7 @@ Shader "Unlit/StarBlobs"
             int _Seed;
 			float time;
             float _Circle_amount;
-            float __Circle_Size;
+            float _Circle_Size;
             sampler2D _GradientTex;            
     		fixed4 _Color1;
 
@@ -107,7 +107,7 @@ Shader "Unlit/StarBlobs"
 				float r = rand(rand_co);
 				r = clamp(r, invert, 1.0 - invert);
 				float circle = distance(uv, float2(r,r));
-				return smoothstep(circle, circle+0.5, invert * __Circle_Size * rand(rand_co*1.5));
+				return smoothstep(circle, circle+0.5, invert * _Circle_Size * rand(rand_co*1.5));
 			}
 			float noise(float2 coord){
 				float2 i = floor(coord);
