@@ -17,16 +17,18 @@ UniPixelPlanet is Pixel Planet generator (Made with Unity).
 <img src="https://user-images.githubusercontent.com/7788005/110446476-8d91ea80-8102-11eb-8c4a-f1ff1f1b6ff4.gif" width="960" alt="UniPixelPlanet Sample gif">
  
 * Generate Planet 
- > Wet
- > Dry
- > Island
- > No Atmosphere
- > Gas Giant1
- > Gas Giant2
- > Ice
- > Lava
- > Asteroids
- > Star
+ ```
+ Wet
+ Dry
+ Island
+ No Atmosphere
+ Gas Giant1
+ Gas Giant2
+ Ice
+ Lava
+ Asteroids
+ Star
+ ```
 * Random seed
 * Light origin
 * Rotation
