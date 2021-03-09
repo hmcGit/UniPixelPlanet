@@ -6,6 +6,9 @@
 
 UniPixelPlanet is Pixel Planet generator (Made with Unity).
 
+PixelPlanet created with shader.
+
+Tested with URP.（It will works with standard shader, but not tested)
 
 
 # DEMO
@@ -13,9 +16,7 @@ UniPixelPlanet is Pixel Planet generator (Made with Unity).
  [WebGL Demo](https://hmcgit.github.io/UniPixelPlanetWebGLDemo/)
  
 # Features
- 
-<img src="https://user-images.githubusercontent.com/7788005/110446476-8d91ea80-8102-11eb-8c4a-f1ff1f1b6ff4.gif" width="960" alt="UniPixelPlanet Sample gif">
- 
+  
 * Generate Planet 
  ```
  Wet
@@ -38,33 +39,18 @@ UniPixelPlanet is Pixel Planet generator (Made with Unity).
 
 # Requirement
  
-"hoge"を動かすのに必要なライブラリなどを列挙する
- 
-* UI Asset [Simple pixel art UI pack](https://kobliznik.itch.io/pixel-ui-pack)
-* Save File Dialog [Unity Standalone File Browser](https://github.com/gkngkc/UnityStandaloneFileBrowser)
- 
-# Installation
- 
-Requirementで列挙したライブラリなどのインストール方法を説明する
- 
-```bash
-pip install huga_package
-```
- 
+* [Simple pixel art UI pack](https://kobliznik.itch.io/pixel-ui-pack) - UI Asset
+* [Unity Standalone File Browser](https://github.com/gkngkc/UnityStandaloneFileBrowser) - Save File Dialog 
+
 # Usage
  
-DEMOの実行方法など、"hoge"の基本的な使い方を説明する
- 
-```bash
-git clone https://github.com/hoge/~
-cd examples
-python demo.py
-```
+Use Prefab or Materials/Shaders.
  
 # Note
  
-
-注意点などがあれば書く
+<img src="https://user-images.githubusercontent.com/7788005/110446476-8d91ea80-8102-11eb-8c4a-f1ff1f1b6ff4.gif" width="960" alt="UniPixelPlanet Sample gif">
+* WebGL : Export doesn't work.
+* Export : In some planet type ( Gas Giant2/Asterois/Stars ), export png and export spritesheets doesn't work properly.Image does not fit in area.
  
 # Author
 
@@ -73,3 +59,8 @@ python demo.py
 # License
  
 UniPixelPlanet is under [MIT license](https://en.wikipedia.org/wiki/MIT_License).
+
+# Thanks
+
+PixelPlanet made with Godot by Deep-Fold. It's awesome tool!
+[PixelPlanets](https://github.com/Deep-Fold/PixelPlanets)
