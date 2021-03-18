@@ -10,5 +10,6 @@ public interface IPlanet {
     void SetCustomTime(float time);
     Color[] GetColors();
     void SetColors(Color[] _colors);
-    
+    void SetInitialColors();
+
 }

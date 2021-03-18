@@ -53,6 +53,9 @@ public class GasLayers : MonoBehaviour, IPlanet {
         m_GasLayers.SetFloat(ShaderProperties.Key_time, dt * 0.5f);
         m_Ring.SetFloat(ShaderProperties.Key_time, dt * 0.5f * -3f);
     }
+    public void SetInitialColors()
+    {
+    }
     public Color[] GetColors()
     {
         var colors = new Color[1];

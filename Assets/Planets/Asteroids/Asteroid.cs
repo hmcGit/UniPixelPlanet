@@ -44,7 +44,18 @@ private void Awake()
         time = Mathf.Clamp(dt,0.1f, 6.28f);
         m_Asteroid.SetFloat(ShaderProperties.Key_Rotation, time);
     }
-
+    public void SetInitialColors()
+    {
+        /*
+        for (int i = 0; i < color_vars1.Length; i++)
+        {
+            // m_Land.SetColor(color_vars1[i], ColorUtil.FromRGB(init_colors1[i]));
+        }
+        for (int i = 0; i < color_vars2.Length; i++)
+        {
+            // m_Cloud.SetColor(color_vars2[i], ColorUtil.FromRGB(init_colors2[i]));
+        }*/
+    }
     public Color[] GetColors()
     {
         var colors = new Color[3];

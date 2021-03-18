@@ -51,6 +51,9 @@ public class GasPlanet : MonoBehaviour, IPlanet {
         m_cloud1.SetFloat(ShaderProperties.Key_time, dt * 0.5f);
         m_cloud2.SetFloat(ShaderProperties.Key_time, dt * 0.5f);
     }
+    public void SetInitialColors()
+    {
+    }
     public Color[] GetColors()
     {
         var colors = new Color[1];

@@ -59,6 +59,9 @@ public class LavaWorld : MonoBehaviour, IPlanet {
         m_Craters.SetFloat(ShaderProperties.Key_time, dt * 0.5f);
         m_Rivers.SetFloat(ShaderProperties.Key_time, dt * 0.5f);
     }
+    public void SetInitialColors()
+    {
+    }
     public Color[] GetColors()
     {
         var colors = new Color[1];
