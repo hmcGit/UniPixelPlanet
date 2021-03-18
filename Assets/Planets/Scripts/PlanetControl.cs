@@ -64,6 +64,7 @@ public class PlanetControl : MonoBehaviour {
         for (int i = 0; i < colors.Count; i++)
         {
             var btn = GameObject.Instantiate(pref_colorButton, colorButtonHolder);
+            colorBtns.Add(btn);
             btn.GetComponent<Image>().color = colors[i];
             btn.GetComponent<ColorChooserButton>().ButtonID = i;
             btn.GetComponent<Button>().onClick.AddListener(() => OnClickChooseColor());
@@ -71,12 +72,13 @@ public class PlanetControl : MonoBehaviour {
     }
     private void GetColors()
     {
-        colors.Clear();
-        colorBtns.Clear();
         foreach (var btn in colorBtns)
         {
             DestroyImmediate(btn);
         }
+        
+        colors.Clear();
+        colorBtns.Clear();
         colors = planets[selected_planet].GetComponent<IPlanet>().GetColors().ToList();
     }
 
@@ -98,6 +100,9 @@ public class PlanetControl : MonoBehaviour {
                 planets[i].SetActive(false);
             }
         }
+        
+        GetColors();
+        MakeColorButtons();
     }
     public void OnSliderPixelChanged()
     {

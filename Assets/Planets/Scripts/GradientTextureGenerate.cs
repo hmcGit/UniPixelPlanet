@@ -6,6 +6,7 @@ public class GradientTextureGenerate : MonoBehaviour {
     [SerializeField] private Gradient gradient;
     [SerializeField] private Material targetMaterial;
 
+    private GradientColorKey[] _colorKeys;
     private void Awake()
     {
         targetMaterial = GetComponent<Image>().material;    
@@ -19,9 +20,15 @@ public class GradientTextureGenerate : MonoBehaviour {
         gradient = new Gradient();
         gradient.SetKeys(colorkey,alphakey);
         targetMaterial.SetTexture(ShaderProperties.Key_GradientTex, CreateTexture());
-        
+        _colorKeys = new GradientColorKey[colorkey.Length];
+        _colorKeys = colorkey;
+
     }
 
+    public GradientColorKey[] GetColorKeys()
+    {
+        return _colorKeys;
+    }
     private Texture2D CreateTexture()
     {
         Texture2D texture = new Texture2D(128, 1);
