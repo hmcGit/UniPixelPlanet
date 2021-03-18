@@ -62,4 +62,16 @@ public class IceWorld : MonoBehaviour, IPlanet {
         m_PlanetUnder.SetFloat(ShaderProperties.Key_time, dt);
         m_Lakes.SetFloat(ShaderProperties.Key_time, dt);
     }
+    public Color[] GetColors()
+    {
+        var colors = new Color[1];
+        return colors;
+    }
+
+    public void SetColors(Color[] _colors)
+    {
+        for (int i = 0; i < _colors.Length; i++)
+        {
+        }
+    }
 }

@@ -41,4 +41,16 @@ public class DryTerran : MonoBehaviour, IPlanet {
         var dt = 10f + time * 60f;
         m_Land.SetFloat(ShaderProperties.Key_time, dt);
     }
+    public Color[] GetColors()
+    {
+        var colors = new Color[1];
+        return colors;
+    }
+
+    public void SetColors(Color[] _colors)
+    {
+        for (int i = 0; i < _colors.Length; i++)
+        {
+        }
+    }
 }

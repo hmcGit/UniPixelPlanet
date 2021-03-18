@@ -85,4 +85,16 @@ public class Stars : MonoBehaviour, IPlanet {
         m_Star.SetFloat(ShaderProperties.Key_time, time);
         m_StarFlares.SetFloat(ShaderProperties.Key_time, time);
     }
+    public Color[] GetColors()
+    {
+        var colors = new Color[1];
+        return colors;
+    }
+
+    public void SetColors(Color[] _colors)
+    {
+        for (int i = 0; i < _colors.Length; i++)
+        {
+        }
+    }
 }

@@ -61,4 +61,16 @@ public class LandMasses : MonoBehaviour, IPlanet {
         m_Water.SetFloat(ShaderProperties.Key_time, dt);
         m_Land.SetFloat(ShaderProperties.Key_time, dt);
     }
+    public Color[] GetColors()
+    {
+        var colors = new Color[1];
+        return colors;
+    }
+
+    public void SetColors(Color[] _colors)
+    {
+        for (int i = 0; i < _colors.Length; i++)
+        {
+        }
+    }
 }

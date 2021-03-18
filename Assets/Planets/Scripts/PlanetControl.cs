@@ -21,21 +21,75 @@ public class PlanetControl : MonoBehaviour {
     [SerializeField] private ExportControl _exportControl;
     [SerializeField] private GameObject exportPanel;
     [SerializeField] private MaterialSave _materialSave;
+    [SerializeField] private GameObject pref_colorButton;
+    [SerializeField] private RectTransform colorButtonHolder;
+    
     private float time = 0f;
     private float pixels = 100;
     private int seed = 0;
     private bool override_time = false;
+    private List<Color> colors = new List<Color>();
+    private List<GameObject> colorBtns = new List<GameObject>();
+    private int selectedColorButtonID = 0;
+    private GameObject selectedColorButton;
     private void Start()
     {
         OnChangeSeedRandom();
+        GetColors();
+        MakeColorButtons();
     }
 
     private int selected_planet = 0;
 
+    public void OnClickChooseColor()
+    {
+        selectedColorButton = EventSystem.current.currentSelectedGameObject;
+        selectedColorButtonID = EventSystem.current.currentSelectedGameObject.GetComponent<ColorChooserButton>().ButtonID;
+        ColorPicker.Create(colors[selectedColorButtonID], "Choose color", onColorChanged, onColorSelected, false);
+    }
+
+    private void onColorChanged(Color currentColor)
+    {
+        colors[selectedColorButtonID] = currentColor;
+        SetColor();
+    }
+
+    private void onColorSelected(Color finishedColor)
+    {
+        colors[selectedColorButtonID] = finishedColor;
+        SetColor();
+    }
+    private void MakeColorButtons()
+    {
+        for (int i = 0; i < colors.Count; i++)
+        {
+            var btn = GameObject.Instantiate(pref_colorButton, colorButtonHolder);
+            btn.GetComponent<Image>().color = colors[i];
+            btn.GetComponent<ColorChooserButton>().ButtonID = i;
+            btn.GetComponent<Button>().onClick.AddListener(() => OnClickChooseColor());
+        }
+    }
+    private void GetColors()
+    {
+        colors.Clear();
+        colorBtns.Clear();
+        foreach (var btn in colorBtns)
+        {
+            DestroyImmediate(btn);
+        }
+        colors = planets[selected_planet].GetComponent<IPlanet>().GetColors().ToList();
+    }
+
+    private void SetColor()
+    {
+        //Debug.Log(selected_planet + ":"+planets[selected_planet]);
+        selectedColorButton.GetComponent<Image>().color = colors[selectedColorButtonID];
+        planets[selected_planet].GetComponent<IPlanet>().SetColors(colors.ToArray());
+    }
     public void OnSelectPlanet()
     {
         selected_planet = dd_planets.value;
-        
+        IPlanet _planet = null;
         for (int i = 0; i < planets.Length; i++)
         {
             if (i == selected_planet) {

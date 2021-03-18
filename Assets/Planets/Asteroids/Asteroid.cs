@@ -6,7 +6,9 @@ using UnityEngine.UI;
 public class Asteroid : MonoBehaviour, IPlanet {
     [SerializeField] private GameObject g_Asteroid;
     private Material m_Asteroid;
-    private void Awake()
+    private string[] color_vars = new string[]{"Color1", "Color2", "Color3"};
+
+private void Awake()
     {
         m_Asteroid = g_Asteroid.GetComponent<Image>().material;
     }
@@ -41,5 +43,23 @@ public class Asteroid : MonoBehaviour, IPlanet {
         var dt = time * 6.28f;
         time = Mathf.Clamp(dt,0.1f, 6.28f);
         m_Asteroid.SetFloat(ShaderProperties.Key_Rotation, time);
+    }
+
+    public Color[] GetColors()
+    {
+        var colors = new Color[3];
+        for (int i = 0; i < color_vars.Length; i++)
+        {
+            colors[i] = m_Asteroid.GetColor(color_vars[i]);
+        }
+        return colors;
+    }
+
+    public void SetColors(Color[] _colors)
+    {
+        for (int i = 0; i < _colors.Length; i++)
+        {
+            m_Asteroid.SetColor(color_vars[i], _colors[i]);
+        }
     }
 }

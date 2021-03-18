@@ -9,6 +9,10 @@ public class LandRivers : MonoBehaviour, IPlanet {
 
     private Material m_Land;
     private Material m_Cloud;
+    
+
+    private string[] color_vars1 = new string[]{"_Color1", "_Color2", "_Color3","_Color4","_River_color","_River_color_dark"};
+    private string[] color_vars2 = new string[]{"_Base_color", "_Outline_color", "_Shadow_Base_color","_Shadow_Outline_color"};
     private void Awake()
     {
         m_Land = Land.GetComponent<Image>().material;
@@ -51,5 +55,32 @@ public class LandRivers : MonoBehaviour, IPlanet {
         var dt = 10f + time * 60f;
         m_Cloud.SetFloat(ShaderProperties.Key_time, dt * 0.25f );
         m_Land.SetFloat(ShaderProperties.Key_time, dt * 0.5f);
+    }
+    public Color[] GetColors()
+    {
+        var colors = new Color[10];
+        int pos = 0;
+        for (int i = 0; i < color_vars1.Length; i++)
+        {
+            colors[i] = m_Land.GetColor(color_vars1[i]);
+        }
+        pos = color_vars1.Length;
+        for (int i = 0; i < color_vars2.Length; i++)
+        {
+            colors[i + pos] = m_Cloud.GetColor(color_vars2[i]);
+        }
+        return colors;
+    }
+
+    public void SetColors(Color[] _colors)
+    {
+        for (int i = 0; i < _colors.Length; i++)
+        {
+            if (i < color_vars1.Length) {
+                m_Land.SetColor(color_vars1[i], _colors[i]);
+            } else {
+                m_Cloud.SetColor(color_vars2[i - color_vars1.Length], _colors[i]);
+            }
+        }
     }
 }

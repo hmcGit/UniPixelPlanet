@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 public interface IPlanet {
     void SetPixel(float amount);
@@ -7,5 +8,7 @@ public interface IPlanet {
     void SetRotate(float r);
     void UpdateTime(float time);
     void SetCustomTime(float time);
+    Color[] GetColors();
+    void SetColors(Color[] _colors);
     
 }
