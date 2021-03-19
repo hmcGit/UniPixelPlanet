@@ -35,6 +35,7 @@ Tested with URP.（It will works with standard shader, but not tested)
 * Light origin
 * Rotation
 * Pixels
+* Pick Color and Gradation
 * Export png 
 * Export spritesheet
 
