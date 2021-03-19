@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.UI;
 [ExecuteInEditMode]
 public class GradientTextureGenerate : MonoBehaviour {
@@ -6,20 +7,25 @@ public class GradientTextureGenerate : MonoBehaviour {
     [SerializeField] private Gradient gradient;
     [SerializeField] private Material targetMaterial;
 
+    [SerializeField] private string Shader_key = "";
     private GradientColorKey[] _colorKeys;
     private void Awake()
     {
-        targetMaterial = GetComponent<Image>().material;    
+      //  targetMaterial = GetComponent<Image>().material;    
         //Material material = new Material(Shader.Find("Unlit/DryTerran"));
-        targetMaterial.SetTexture(ShaderProperties.Key_GradientTex, CreateTexture());
+        targetMaterial.SetTexture(Shader_key, CreateTexture());
         //GetComponent<Renderer>().material = material;
     }
 
-    public void SetColors(GradientColorKey[] colorkey, GradientAlphaKey[] alphakey)
+    public void SetColors(GradientColorKey[] colorkey, GradientAlphaKey[] alphakey,string key = "")
     {
+        if (string.IsNullOrEmpty(key))
+        {
+            key = Shader_key;
+        }
         gradient = new Gradient();
         gradient.SetKeys(colorkey,alphakey);
-        targetMaterial.SetTexture(ShaderProperties.Key_GradientTex, CreateTexture());
+        targetMaterial.SetTexture(key, CreateTexture());
         _colorKeys = new GradientColorKey[colorkey.Length];
         _colorKeys = colorkey;
 
