@@ -90,13 +90,13 @@ public class LandRivers : MonoBehaviour, IPlanet {
 
     public void SetColors(Color[] _colors)
     {
-        for (int i = 0; i < _colors.Length; i++)
+        for (int i = 0; i < color_vars1.Length; i++)
         {
-            if (i < color_vars1.Length) {
-                m_Land.SetColor(color_vars1[i], _colors[i]);
-            } else {
-                m_Cloud.SetColor(color_vars2[i - color_vars1.Length], _colors[i]);
-            }
+            m_Land.SetColor(color_vars1[i], _colors[i]);
+        }
+        for (int i = 0; i < color_vars2.Length; i++)
+        {
+            m_Cloud.SetColor(color_vars2[i], _colors[i + color_vars1.Length]);
         }
     }
 }
