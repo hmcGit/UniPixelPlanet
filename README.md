@@ -45,7 +45,9 @@ Use Prefab or Materials/Shaders.
  
 # Note
  
-<img src="https://user-images.githubusercontent.com/7788005/110446476-8d91ea80-8102-11eb-8c4a-f1ff1f1b6ff4.gif" width="960" alt="UniPixelPlanet Sample gif">
+![export1](https://user-images.githubusercontent.com/7788005/111735443-6506af00-88bf-11eb-9d60-6ff56987265c.png)
+![export2](https://user-images.githubusercontent.com/7788005/111735453-67690900-88bf-11eb-9907-41ed87bf2408.png)
+
 
 * Export : In some planet type ( Gas Giant2/Asterois/Stars ), export png and export spritesheets doesn't work properly.Image does not fit in area.
 
