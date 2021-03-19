@@ -52,6 +52,7 @@ Use Prefab or Materials/Shaders.
  
 * [Simple pixel art UI pack](https://kobliznik.itch.io/pixel-ui-pack) - UI Asset
 * [Unity Standalone File Browser](https://github.com/gkngkc/UnityStandaloneFileBrowser) - Save File Dialog 
+* [Easy Color & Gradient Picker](https://assetstore.unity.com/packages/2d/gui/easy-color-gradient-picker-176831) - Color and Gradient Picker
 
 # Author
 
