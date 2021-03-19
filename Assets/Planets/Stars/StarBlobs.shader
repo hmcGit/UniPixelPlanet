@@ -9,7 +9,6 @@ Shader "Unlit/StarBlobs"
 	    _Time_speed("Time Speed",range(-1.0, 1.0)) = 0.2
 	        	
 	    _Color1("Color", Color) = (1,1,1,1)
-	    _GradientTex("Texture", 2D) = "white" {}
     	
 	    _Size("Size",float) = 50.0
 	    _OCTAVES("OCTAVES", range(0,20)) = 0
@@ -65,8 +64,7 @@ Shader "Unlit/StarBlobs"
             int _Seed;
 			float time;
             float _Circle_amount;
-            float _Circle_Size;
-            sampler2D _GradientTex;            
+            float _Circle_Size;           
     		fixed4 _Color1;
 
             

@@ -6,11 +6,14 @@ using UnityEngine.UI;
 public class Asteroid : MonoBehaviour, IPlanet {
     [SerializeField] private GameObject g_Asteroid;
     private Material m_Asteroid;
-    private string[] color_vars = new string[]{"Color1", "Color2", "Color3"};
+    private string[] color_vars = new string[]{"_Color1", "_Color2", "_Color3"};
+    
+    private string[] init_colors = new string[] {"#a3a7c2", "#4c6885", "#3a3f5e"};
 
 private void Awake()
     {
         m_Asteroid = g_Asteroid.GetComponent<Image>().material;
+        SetInitialColors();
     }
     public void SetPixel(float amount)
     {
@@ -46,15 +49,10 @@ private void Awake()
     }
     public void SetInitialColors()
     {
-        /*
-        for (int i = 0; i < color_vars1.Length; i++)
+        for (int i = 0; i < color_vars.Length; i++)
         {
-            // m_Land.SetColor(color_vars1[i], ColorUtil.FromRGB(init_colors1[i]));
+            m_Asteroid.SetColor(color_vars[i], ColorUtil.FromRGB(init_colors[i]));
         }
-        for (int i = 0; i < color_vars2.Length; i++)
-        {
-            // m_Cloud.SetColor(color_vars2[i], ColorUtil.FromRGB(init_colors2[i]));
-        }*/
     }
     public Color[] GetColors()
     {
