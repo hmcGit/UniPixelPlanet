@@ -1,9 +1,9 @@
-Shader "Unlit/LandRivers"
+Shader "UniPixelPlanet/LandRivers"
 {
     Properties
     {
         _MainTex ("Texture", 2D) = "white" {}
-	    _Pixels("Pixels", range(10,100)) = 0.0
+	    _Pixels("Pixels", range(10,512)) = 0.0
 	    _Rotation("Rotation",range(0.0, 6.28)) = 0.0
     	_Light_origin("Light origin", Vector) = (0.39,0.39,0.39,0.39)
 	    _Time_speed("Time Speed",range(-1.0, 1.0)) = 0.2
@@ -31,7 +31,7 @@ Shader "Unlit/LandRivers"
     {
         //Tags { "RenderType"="Opaque" }
         Tags { "RenderType"="Opaque" "RenderPipeline" = "UniversalPipeline" "IgnoreProjector" = "True"}
-        LOD 100
+        //LOD 100
 
         Pass
         {
@@ -40,14 +40,16 @@ Shader "Unlit/LandRivers"
 			CULL Off
 			ZWrite Off // don't write to depth buffer 
          	Blend SrcAlpha OneMinusSrcAlpha // use alpha blending
-
-
         	
             CGPROGRAM
+            
+			#pragma target 3.0
             #pragma vertex vert
             #pragma fragment frag
             // make fog work
             #pragma multi_compile_fog
+            #pragma fragmentoption ARB_precision_hint_fastest
+			#pragma multi_compile_fwdbase
 
             #include "UnityCG.cginc"
             #include "../cginc/hlmod.cginc"
@@ -149,14 +151,14 @@ Shader "Unlit/LandRivers"
 
 			fixed4 frag(v2f i) : COLOR {
 				// pixelize uv
-            	
-				float2 uv = floor(i.uv*_Pixels)/_Pixels;				
-				//uv.y = 1 - uv.y;
+
+				//float2 uv = i.uv;
+				float2 uv = floor(i.uv*_Pixels)/_Pixels;
 
 	
 				float d_light = distance(uv , _Light_origin);
 				bool dith = dither(uv, uv);
-				float a = step(distance(float2(0.5,0.5), uv), 0.5);
+				float a = 1.0f;//step(distance(float2(0.5,0.5), uv), 0.5);
 				
 				// give planet a tilt
 				uv = rotate(uv, _Rotation);
@@ -214,12 +216,12 @@ Shader "Unlit/LandRivers"
 					if (fbm4 + d_light < fbm1*1.5) {
 						col = _River_color.rgb;
 					}
-				}
-				
+				}				
 				return fixed4(col, a);
 				}
             
             ENDCG
         }
     }
+	FallBack "Diffuse"
 }
