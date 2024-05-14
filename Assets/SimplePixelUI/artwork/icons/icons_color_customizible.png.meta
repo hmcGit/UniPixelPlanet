@@ -108,7 +108,7 @@ TextureImporter:
       213: -1148617841872355270
     second: isonswhite2_34
   externalObjects: {}
-  serializedVersion: 10
+  serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -125,9 +125,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -137,8 +140,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -159,9 +162,15 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -173,6 +182,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -185,6 +195,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -197,6 +208,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -209,6 +221,33 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -959,9 +998,44 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-  spritePackingTag: 
+    nameFileIdTable:
+      isonswhite2_0: -3915288548941881612
+      isonswhite2_1: -6064698589780549783
+      isonswhite2_10: -5611136652117499180
+      isonswhite2_11: -2024606662850549571
+      isonswhite2_12: -2381500297140005776
+      isonswhite2_13: -5908534354296120792
+      isonswhite2_14: -1099396636000734626
+      isonswhite2_15: -9147400036283487591
+      isonswhite2_16: 107280097507075921
+      isonswhite2_17: -3651824946001971164
+      isonswhite2_18: -5743856943257200401
+      isonswhite2_19: -3970517187922480367
+      isonswhite2_2: 4376132946644718016
+      isonswhite2_20: 2773992808477904761
+      isonswhite2_21: 2238386083235014152
+      isonswhite2_22: -5305403707639393297
+      isonswhite2_23: -7440971185202368722
+      isonswhite2_24: -7062812790716468544
+      isonswhite2_25: 97452308493143843
+      isonswhite2_26: -4598059474086584248
+      isonswhite2_27: 650022395868303075
+      isonswhite2_28: 8733657598935678242
+      isonswhite2_29: -8943924478185911527
+      isonswhite2_3: 3943050131641414758
+      isonswhite2_30: 2717596346815555612
+      isonswhite2_31: -1613750400487606341
+      isonswhite2_32: -2308001801626795153
+      isonswhite2_33: -6548008519882821858
+      isonswhite2_34: -1148617841872355270
+      isonswhite2_4: -2891059516951804756
+      isonswhite2_5: 5548767936245927627
+      isonswhite2_6: -5900926969388301916
+      isonswhite2_7: 1881423083123314185
+      isonswhite2_8: -961280449010390996
+      isonswhite2_9: -5474248854234790524
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
